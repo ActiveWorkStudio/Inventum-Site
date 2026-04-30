@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИНВЕНТУМ — платформа структурированных баз знаний</title>
+    <meta name="description" content="ИНВЕНТУМ — универсальная платформа для построения структурированных баз знаний и информационных систем с графовой моделью данных. От прототипа системы поддержки научных исследований к универсальному инструменту.">
+    <meta property="og:title" content="ИНВЕНТУМ — платформа структурированных баз знаний">
+    <meta property="og:description" content="Универсальная платформа для построения структурированных баз знаний и информационных систем с графовой моделью данных.">
+    <meta property="og:image" content="assets/img/seo_img.jpg">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="assets/img/logo-dark.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- ========== Навигация ========== -->
+<nav class="nav" id="nav">
+    <div class="container nav__inner">
+        <a href="#hero" class="nav__brand">
+            <img src="assets/img/logo.png" alt="" class="nav__logo nav__logo--light">
+            <img src="assets/img/logo-dark.png" alt="" class="nav__logo nav__logo--dark">
+            <span class="nav__title">ИНВЕНТУМ</span>
+        </a>
+        <button class="nav__burger" id="navBurger" aria-label="Открыть меню">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__menu" id="navMenu">
+            <li><a href="#concept">Идея</a></li>
+            <li><a href="#cases">Примеры</a></li>
+            <li><a href="#features">Возможности</a></li>
+            <li><a href="#next">До коммерции</a></li>
+            <li><a href="#roadmap">Развитие</a></li>
+            <li><a href="#history">О проекте</a></li>
+            <li><a href="#contact" class="nav__cta">Связаться</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ========== Hero ========== -->
+<header class="hero" id="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+    <div class="container hero__inner">
+        <img src="assets/img/logo.png" alt="ИНВЕНТУМ" class="hero__logo">
+        <h1 class="hero__title">ИНВЕНТУМ</h1>
+        <p class="hero__tagline">Платформа структурированных баз знаний</p>
+        <p class="hero__subtitle">
+            Рабочий прототип, прошедший НИОКР с поддержкой Фонда содействия инновациям.
+            От системы поддержки научных исследований — к универсальной платформе для любой предметной области.
+        </p>
+        <div class="hero__actions">
+            <a href="#concept" class="btn btn--primary">Узнать о системе</a>
+            <a href="#contact" class="btn btn--ghost">Связаться</a>
+        </div>
+        <a href="https://fasie.ru" target="_blank" rel="noopener" class="hero__support">
+            <img src="assets/img/fasie-white.png" alt="" class="hero__support-logo">
+            <span class="hero__support-texts">
+                <span class="hero__support-label">Разработано при поддержке</span>
+                <span class="hero__support-name">Фонда содействия инновациям</span>
+            </span>
+        </a>
+    </div>
+    <a href="#concept" class="hero__scroll" aria-label="Прокрутить вниз">
+        <span></span>
+    </a>
+</header>
+
+<!-- ========== Идея и концепция ========== -->
+<section class="section section--concept" id="concept">
+    <div class="container">
+        <div class="section__head">
+            <span class="section__eyebrow">Идея</span>
+            <h2 class="section__title">Знания устроены как сеть, а не как таблица</h2>
+            <p class="section__lede">
+                Большинство ИТ-систем построены вокруг конкретной задачи: CRM хранит клиентов,
+                ERP — операции, LIMS — образцы. ИНВЕНТУМ построен иначе. Пользователь сам описывает,
+                что для него «объект», какие у него характеристики и с чем он связан, — а платформа
+                на основе этой модели создаёт базу данных, формы, реестры, права и поиск без написания кода.
+            </p>
+        </div>
+
+        <div class="concept-grid">
+            <article class="concept-card">
+                <div class="concept-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="6" y="14" width="20" height="14" rx="2"/>
+                        <rect x="38" y="14" width="20" height="14" rx="2"/>
+                        <rect x="6" y="36" width="20" height="14" rx="2"/>
+                        <rect x="38" y="36" width="20" height="14" rx="2"/>
+                        <path d="M26 21h12M26 43h12M16 28v8M48 28v8"/>
+                    </svg>
+                </div>
+                <h3 class="concept-card__title">Универсальная концепция</h3>
+                <p class="concept-card__text">
+                    Изначально продукт создавался как прототип системы поддержки научных исследований.
+                    Но его архитектура одинаково подходит для каталогов недвижимости и техники,
+                    баз методик и регламентов, корпоративных wiki, MDM-систем,
+                    отраслевых справочников, личных и командных баз знаний — везде, где данные
+                    типизированы и связаны между собой.
+                </p>
+            </article>
+
+            <article class="concept-card">
+                <div class="concept-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="32" cy="14" r="5"/>
+                        <circle cx="12" cy="34" r="5"/>
+                        <circle cx="52" cy="34" r="5"/>
+                        <circle cx="20" cy="52" r="5"/>
+                        <circle cx="44" cy="52" r="5"/>
+                        <path d="M30 18 14 30M34 18l16 12M16 38l3 9M48 38l-3 9M24 52h16"/>
+                    </svg>
+                </div>
+                <h3 class="concept-card__title">Связи и автоматический граф</h3>
+                <p class="concept-card__text">
+                    Реальные предметные области устроены как сеть связанных сущностей:
+                    статья ссылается на эксперимент, эксперимент использует методику, методика
+                    принадлежит автору. ИНВЕНТУМ хранит связи как полноценные двунаправленные
+                    сущности, а на их основе автоматически строит семантическую сеть — интерактивный
+                    граф, по которому можно перемещаться, искать кратчайшие пути между объектами
+                    и обнаруживать неочевидные зависимости. База данных превращается в карту знаний.
+                </p>
+            </article>
+
+            <article class="concept-card">
+                <div class="concept-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 16h32M12 26h24M12 36h32M12 46h18"/>
+                        <path d="M50 32l8 4-8 4z" fill="currentColor" stroke="none"/>
+                        <path d="M50 36h-6"/>
+                    </svg>
+                </div>
+                <h3 class="concept-card__title">Настройка без программирования</h3>
+                <p class="concept-card__text">
+                    Чтобы развернуть свою базу знаний, не нужно быть программистом или
+                    администратором БД. Достаточно описать предметную область: какие классы
+                    объектов вам важны, какие у них характеристики, как они связаны. Платформа сделает
+                    остальное — создаст таблицы, сгенерирует формы ввода, реестры, фильтры,
+                    систему прав, версионирование и аудит. Модель можно дорабатывать в любой
+                    момент: данные остаются валидными.
+                </p>
+            </article>
+        </div>
+
+        <figure class="concept-illustration">
+            <img src="assets/img/schema.jpg" alt="Конструктор моделей объектов и автоматическое построение семантической сети">
+            <figcaption>
+                Описанная пользователем модель → структурированные информационные объекты →
+                автоматически построенная семантическая сеть → поиск знаний по связям
+            </figcaption>
+        </figure>
+
+        <div class="concept-highlight">
+            <p>
+                В большинстве ИТ-систем данные хранятся плоско — таблицами или документами.
+                Но реальные знания состоят из связей: одно опирается на другое, одно следует
+                из другого. ИНВЕНТУМ показывает не записи в таблицах, а структуру предметной
+                области целиком.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ========== Сценарии применения ========== -->
+<section class="section section--cases" id="cases">
+    <div class="container">
+        <div class="section__head">
+            <span class="section__eyebrow">Сценарии применения</span>
+            <h2 class="section__title">Что можно построить уже сейчас</h2>
+            <p class="section__lede">
+                Универсальная архитектура подтверждена в задачах из совершенно разных
+                ниш. Ниже — три типовых сценария: модель данных, экраны конструктора,
+                реестров, навигации и семантической сети.
+            </p>
+        </div>
+
+        <div class="cases-grid">
+            <a href="examples/research.html" class="case-card">
+                <div class="case-card__icon" aria-hidden="true">
+                    <img src="assets/img/ico-brain.png" alt="">
+                </div>
+                <h3 class="case-card__title">Поддержка научных исследований</h3>
+                <p class="case-card__text">
+                    R&amp;D-департаменты, лаборатории, НИИ. База статей, экспериментов,
+                    методик и оборудования с прослеживаемыми связями. Исторический сценарий —
+                    под него велась НИОКР с поддержкой ФСИ.
+                </p>
+                <span class="case-card__more">Смотреть пример →</span>
+            </a>
+
+            <a href="examples/mdm.html" class="case-card">
+                <div class="case-card__icon" aria-hidden="true">
+                    <img src="assets/img/ico-function.png" alt="">
+                </div>
+                <h3 class="case-card__title">Корпоративная база знаний и MDM</h3>
+                <p class="case-card__text">
+                    Структурированные регламенты, методики, мастер-данные предприятия,
+                    ответственные подразделения, история изменений. Замена самописных
+                    порталов и тяжеловесных enterprise-решений.
+                </p>
+                <span class="case-card__more">Смотреть пример →</span>
+            </a>
+
+            <a href="examples/catalog.html" class="case-card">
+                <div class="case-card__icon" aria-hidden="true">
+                    <img src="assets/img/ico-marketplace.png" alt="">
+                </div>
+                <h3 class="case-card__title">Отраслевой каталог</h3>
+                <p class="case-card__text">
+                    Каталог недвижимости, оборудования, поставщиков или специалистов
+                    с богатой моделью связей и фасетным поиском. То, что не делается
+                    обычной CMS и слишком тяжело для headless-решений.
+                </p>
+                <span class="case-card__more">Смотреть пример →</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ========== Готовый функционал ========== -->
+<section class="section section--features" id="features">
+    <div class="container">
+        <div class="section__head">
+            <span class="section__eyebrow">Возможности прототипа</span>
+            <h2 class="section__title">Что реализовано в текущей версии</h2>
+            <p class="section__lede">
+                По итогам НИОКР и последующего развития реализован рабочий прототип
+                со всеми ключевыми подсистемами корпоративной информационной системы.
+                Архитектура и концепция подтверждены — прототип готов к пилотным внедрениям
+                и доработке до коммерческого продукта.
+            </p>
+        </div>
+
+        <div class="features-grid">
+            <article class="feature-card">
+                <div class="feature-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="4" y="11" width="16" height="10" rx="2"/>
+                        <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+                    </svg>
+                </div>
+                <h3>Аутентификация и безопасность</h3>
+                <p>Двухфакторная аутентификация, авторизация через шесть OAuth-провайдеров, восстановление и смена email, телефона, способа входа.</p>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="7" height="7" rx="1"/>
+                        <rect x="14" y="3" width="7" height="7" rx="1"/>
+                        <rect x="3" y="14" width="7" height="7" rx="1"/>
+                        <rect x="14" y="14" width="7" height="7" rx="1"/>
+                    </svg>
+                </div>
+                <h3>Конструктор моделей</h3>
+                <p>Шесть типов характеристик — текст, число, дата-время, логический, файл, ссылка. Иерархии классов, встречные характеристики, шаблоны.</p>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="9"/>
+                        <path d="M12 3v18M3 12h18"/>
+                        <path d="M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/>
+                    </svg>
+                </div>
+                <h3>Гранулярный доступ</h3>
+                <p>Раздельные права на уровне рабочего пространства, проекта, класса и каждой характеристики. Роли, фильтры доступа, аудит назначений.</p>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="6" cy="12" r="3"/>
+                        <circle cx="18" cy="6" r="3"/>
+                        <circle cx="18" cy="18" r="3"/>
+                        <path d="M8.5 10.5l7-3M8.5 13.5l7 3"/>
+                    </svg>
+                </div>
+                <h3>Двунаправленные связи</h3>
+                <p>Создание связи между двумя объектами автоматически отражается с обеих сторон. Связи — полноценные сущности, а не внешние ключи.</p>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="5" cy="6" r="2"/>
+                        <circle cx="19" cy="6" r="2"/>
+                        <circle cx="12" cy="12" r="2"/>
+                        <circle cx="5" cy="18" r="2"/>
+                        <circle cx="19" cy="18" r="2"/>
+                        <path d="M7 6l4 5M17 6l-4 5M7 18l4-5M17 18l-4-5"/>
+                    </svg>
+                </div>
+                <h3>Семантическая сеть</h3>
+                <p>Интерактивный граф предметной области с фильтрами, сохранением схем, экспортом в изображение, навигацией от объекта.</p>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 5h16M4 12h16M4 19h10"/>
+                        <path d="M16 17l3 3 5-6"/>
+                    </svg>
+                </div>
+                <h3>Вычислимые характеристики</h3>
+                <p>Формулы и JS-выражения в безопасной серверной песочнице с лимитами по времени и стеку. Автоформулы наименования объектов.</p>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="9"/>
+                        <path d="M12 7v5l3 2"/>
+                    </svg>
+                </div>
+                <h3>История изменений</h3>
+                <p>Полная история на уровне каждой характеристики каждого объекта. Возможность отследить, кто и когда изменил конкретное значение.</p>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="7"/>
+                        <path d="M16.5 16.5L21 21"/>
+                        <path d="M8 11h6M11 8v6" />
+                    </svg>
+                </div>
+                <h3>Реестры и поиск</h3>
+                <p>Несколько настраиваемых видов реестров на класс, фильтры, группировка, сортировка, полнотекстовый поиск по объектам.</p>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 11a7 7 0 0 1 14 0v3l1.5 3h-17L5 14z"/>
+                        <path d="M9 18a3 3 0 0 0 6 0"/>
+                    </svg>
+                </div>
+                <h3>Уведомления</h3>
+                <p>Email и SMS-рассылки с очередью задач, шаблонами, расписанием. Поддержка SendGrid, Twilio, SmsRu, GPRS-модема.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ========== Технологии ========== -->
+<section class="section section--tech" id="tech">
+    <div class="container">
+        <div class="section__head">
+            <span class="section__eyebrow">Технологии</span>
+            <h2 class="section__title">На чём построена система</h2>
+            <p class="section__lede">
+                Открытый стек на .NET и PostgreSQL: кроссплатформенный сервер, БД из реестра
+                отечественного ПО, единый язык разработки. Основа для подачи самой платформы
+                в Реестр отечественного ПО и последующей сертификации в ФСТЭК.
+            </p>
+        </div>
+
+        <ul class="tech-list">
+            <li class="tech-list__item"><span class="tech-list__name">.NET / C#</span></li>
+            <li class="tech-list__item"><span class="tech-list__name">PostgreSQL</span></li>
+            <li class="tech-list__item"><span class="tech-list__name">Entity Framework Core</span></li>
+            <li class="tech-list__item"><span class="tech-list__name">ASP.NET</span></li>
+            <li class="tech-list__item"><span class="tech-list__name">Quartz.NET</span></li>
+            <li class="tech-list__item"><span class="tech-list__name">Jint</span></li>
+            <li class="tech-list__item"><span class="tech-list__name">vis-network</span></li>
+            <li class="tech-list__item"><span class="tech-list__name">Redis</span></li>
+        </ul>
+    </div>
+</section>
+
+<!-- ========== От прототипа к продукту ========== -->
+<section class="section section--next" id="next">
+    <div class="container">
+        <div class="section__head">
+            <span class="section__eyebrow">Дорожная карта на 12 месяцев</span>
+            <h2 class="section__title">От прототипа к продукту</h2>
+            <p class="section__lede">
+                Что нужно сделать в ближайший год, чтобы перевести прототип в стадию
+                коммерчески готового продукта. Это и есть ответ на вопрос, на что
+                направляются инвестиции.
+            </p>
+        </div>
+
+        <ol class="next-list">
+            <li class="next-item">
+                <div class="next-item__num">01</div>
+                <div class="next-item__body">
+                    <h3>Стабилизация ядра</h3>
+                    <p>Закрытие технического долга, обновление .NET Core 3.1 до актуальной LTS-версии .NET, рефакторинг проблемных подсистем, повышение покрытия тестами.</p>
+                </div>
+            </li>
+            <li class="next-item">
+                <div class="next-item__num">02</div>
+                <div class="next-item__body">
+                    <h3>Production-готовность</h3>
+                    <p>Нагрузочное тестирование, мониторинг и наблюдаемость, процедуры бэкапов и восстановления, эксплуатационная документация, отработка сценариев инцидентов.</p>
+                </div>
+            </li>
+            <li class="next-item">
+                <div class="next-item__num">03</div>
+                <div class="next-item__body">
+                    <h3>Импортозамещение</h3>
+                    <p>Подача в Реестр отечественного ПО, последующая сертификация в ФСТЭК. Открывает доступ к госзакупкам и крупному корпоративному заказчику с регуляторными требованиями.</p>
+                </div>
+            </li>
+            <li class="next-item">
+                <div class="next-item__num">04</div>
+                <div class="next-item__body">
+                    <h3>Доработка UX и материалов</h3>
+                    <p>Шлифовка интерфейсов администратора и конечного пользователя, обучающие материалы, демо-сценарии, типовые шаблоны моделей под популярные ниши.</p>
+                </div>
+            </li>
+            <li class="next-item">
+                <div class="next-item__num">05</div>
+                <div class="next-item__body">
+                    <h3>Команда и go-to-market</h3>
+                    <p>Расширение продуктовой команды, найм продаж и маркетинга, выстраивание партнёрской сети, запуск первых пилотных внедрений с целевыми заказчиками.</p>
+                </div>
+            </li>
+        </ol>
+
+        <p class="next-note">
+            Подробный технический roadmap — архитектурные решения, мультитенантность,
+            биллинг и личные кабинеты, расширение метамодели, безопасность и аудит —
+            предоставляется по запросу заинтересованным инвесторам и партнёрам под NDA.
+        </p>
+    </div>
+</section>
+
+<!-- ========== Направления развития ========== -->
+<section class="section section--roadmap" id="roadmap">
+    <div class="container">
+        <div class="section__head">
+            <span class="section__eyebrow">Направления развития</span>
+            <h2 class="section__title">Куда продукт может вырасти</h2>
+            <p class="section__lede">
+                Реализованное ядро открывает несколько стратегических направлений.
+                Каждое из них опирается на уже существующую архитектуру и может развиваться
+                как самостоятельный продукт.
+            </p>
+        </div>
+
+        <div class="roadmap-grid">
+            <article class="roadmap-card">
+                <div class="roadmap-card__num">01</div>
+                <img src="assets/img/ico-brain.png" alt="" class="roadmap-card__icon">
+                <h3 class="roadmap-card__title">AI-усиление</h3>
+                <p class="roadmap-card__text">
+                    Графовая, типизированная природа платформы — идеальная среда для интеграции
+                    с большими языковыми моделями. Bootstrapping модели данных из текстового
+                    описания предметной области, разговорный поиск по базе знаний, генерация
+                    бизнес-логики на естественном языке. Структурированный контекст даёт ИИ
+                    в разы лучшее качество ответов, чем неструктурированный текст.
+                </p>
+            </article>
+
+            <article class="roadmap-card">
+                <div class="roadmap-card__num">02</div>
+                <img src="assets/img/ico-function.png" alt="" class="roadmap-card__icon">
+                <h3 class="roadmap-card__title">Embedded-библиотека</h3>
+                <p class="roadmap-card__text">
+                    Ядро платформы как переиспользуемый компонент для встраивания в чужие
+                    продукты. Готовый движок управления данными по метамодели — база, права,
+                    связи, история — становится доступным разработчикам и системным интеграторам
+                    в виде библиотеки и REST API. Альтернатива самописной CMS или тяжеловесных
+                    headless-решений.
+                </p>
+            </article>
+
+            <article class="roadmap-card">
+                <div class="roadmap-card__num">03</div>
+                <img src="assets/img/ico-lowcode.png" alt="" class="roadmap-card__icon">
+                <h3 class="roadmap-card__title">Low-code платформа со студией</h3>
+                <p class="roadmap-card__text">
+                    Визуальный конструктор моделей и интерфейсов: описал предметную область,
+                    настроил формы и роли — получил рабочее веб-приложение. Облачная
+                    SaaS-версия и развёртывание on-premise. Закрывает нишу зарубежных
+                    low-code платформ, ушедших с российского рынка.
+                </p>
+            </article>
+
+            <article class="roadmap-card">
+                <div class="roadmap-card__num">04</div>
+                <img src="assets/img/ico-marketplace.png" alt="" class="roadmap-card__icon">
+                <h3 class="roadmap-card__title">Маркетплейс отраслевых моделей</h3>
+                <p class="roadmap-card__text">
+                    Готовые предметные модели от сообщества аналитиков и отраслевых экспертов:
+                    типовые модели для логистики, недвижимости, образования, юридического
+                    делопроизводства. Аналитики получают новую профессиональную нишу,
+                    пользователи — стартовый набор для быстрого внедрения.
+                </p>
+            </article>
+
+            <article class="roadmap-card">
+                <div class="roadmap-card__num">05</div>
+                <img src="assets/img/ico-sites.png" alt="" class="roadmap-card__icon">
+                <h3 class="roadmap-card__title">Data-driven сайты</h3>
+                <p class="roadmap-card__text">
+                    Платформа в режиме headless CMS для построения публичных сайтов
+                    со структурированным контентом: отраслевые каталоги, директории
+                    специалистов, базы знаний, малые маркетплейсы. Ниша, в которой
+                    обычные конструкторы лендингов не работают.
+                </p>
+            </article>
+
+            <article class="roadmap-card">
+                <div class="roadmap-card__num">06</div>
+                <img src="assets/img/ico-regulatory.png" alt="" class="roadmap-card__icon">
+                <h3 class="roadmap-card__title">Регуляторика и гос-сектор</h3>
+                <p class="roadmap-card__text">
+                    Отечественный стек, юрисдикция РФ и закрытый НИОКР по поддержке Фонда
+                    содействия инновациям — фундамент для подачи в Реестр отечественного ПО
+                    и последующей сертификации в ФСТЭК. Это открывает доступ к
+                    госзакупкам и крупному корпоративному заказчику.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ========== История проекта ========== -->
+<section class="section section--history" id="history">
+    <div class="container">
+        <div class="section__head">
+            <span class="section__eyebrow">О проекте</span>
+            <h2 class="section__title">История и поддержка Фонда содействия инновациям</h2>
+            <p class="section__lede">
+                Проект развивается с 2017 года. В апреле 2019 получил финансовую поддержку
+                <a href="https://fasie.ru" target="_blank" rel="noopener">ФГБУ «Фонд содействия развитию малых форм
+                предприятий в научно-технической сфере»</a> по программе СТАРТ-1 на проведение
+                научно-исследовательских и опытно-конструкторских работ по теме
+                «Разработка прототипа системы поддержки научных исследований».
+            </p>
+        </div>
+
+        <ol class="timeline">
+            <li class="timeline__item">
+                <div class="timeline__dot"></div>
+                <div class="timeline__date">2017</div>
+                <div class="timeline__body">
+                    <h4>Старт проекта</h4>
+                    <p>Сформирована команда, разработаны концепция и архитектура универсальной технологической платформы для построения информационных систем.</p>
+                </div>
+            </li>
+            <li class="timeline__item">
+                <div class="timeline__dot timeline__dot--accent"></div>
+                <div class="timeline__date">апрель 2019</div>
+                <div class="timeline__body">
+                    <h4>Поддержка Фонда содействия инновациям</h4>
+                    <p>Получено финансирование по программе СТАРТ-1 на проведение НИОКТР по теме «Разработка прототипа системы поддержки научных исследований».</p>
+                </div>
+            </li>
+            <li class="timeline__item">
+                <div class="timeline__dot timeline__dot--accent"></div>
+                <div class="timeline__date">март 2020</div>
+                <div class="timeline__body">
+                    <h4>Завершение НИОКР</h4>
+                    <p>Прототип реализован, проведены приёмочные испытания. Получено свидетельство о государственной регистрации программы для ЭВМ.</p>
+                </div>
+            </li>
+            <li class="timeline__item">
+                <div class="timeline__dot timeline__dot--current"></div>
+                <div class="timeline__date">2020 — настоящее время</div>
+                <div class="timeline__body">
+                    <h4>Стадия рабочего прототипа</h4>
+                    <p>На базе результатов НИОКР продукт развивается в сторону универсальной low-code-платформы. Идёт подготовка к коммерческому запуску: модернизация стека, прохождение процедур импортозамещения, формирование команды, поиск первых пилотных заказчиков.</p>
+                </div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<!-- ========== Сотрудничество ========== -->
+<section class="section section--cooperation">
+    <div class="container">
+        <div class="section__head">
+            <span class="section__eyebrow">Сотрудничество</span>
+            <h2 class="section__title">Открыты к диалогу</h2>
+            <p class="section__lede">
+                Реализованное ядро готово к развитию в нескольких направлениях.
+                Заинтересованы в сотрудничестве с инвесторами, партнёрами и ранними заказчиками.
+            </p>
+        </div>
+
+        <div class="cooperation-grid">
+            <article class="cooperation-card">
+                <h3>Инвесторам</h3>
+                <p>
+                    Ищем инвестиционного партнёра для доведения прототипа до коммерческого
+                    продукта: стабилизация и обновление стека, прохождение процедур
+                    импортозамещения, формирование продуктовой и коммерческой команды,
+                    запуск первых пилотных внедрений. Готовое ядро после НИОКР с поддержкой
+                    Фонда содействия инновациям — основа, на которой можно строить
+                    продуктовую компанию в нише low-code и баз знаний.
+                </p>
+            </article>
+
+            <article class="cooperation-card">
+                <h3>Партнёрам и интеграторам</h3>
+                <p>
+                    Приглашаем системных интеграторов и продуктовые команды к встраиванию
+                    ядра ИНВЕНТУМ в собственные решения, а отраслевых аналитиков — к
+                    разработке предметных моделей для будущего маркетплейса. Возможны
+                    лицензионные и партнёрские модели сотрудничества.
+                </p>
+            </article>
+
+            <article class="cooperation-card">
+                <h3>Заказчикам</h3>
+                <p>
+                    Готовы к пилотным внедрениям для построения отраслевых каталогов,
+                    корпоративных и публичных баз знаний, MDM-систем, отраслевых справочников
+                    и информационных систем поддержки исследовательской деятельности.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ========== Контакты ========== -->
+<section class="section section--contact" id="contact">
+    <div class="container contact__container">
+        <div class="contact__info">
+            <span class="section__eyebrow">Контакты</span>
+            <h2 class="section__title">Связаться с нами</h2>
+            <p class="contact__lede">
+                Расскажите о вашем интересе к проекту — мы свяжемся с вами и обсудим
+                варианты сотрудничества.
+            </p>
+
+            <div class="contact__details">
+                <div class="contact__row">
+                    <span class="contact__label">E-mail</span>
+                    <a href="mailto:a.i.kononov@yandex.ru" class="contact__value">a.i.kononov@yandex.ru</a>
+                </div>
+                <div class="contact__row">
+                    <span class="contact__label">Юридическое лицо</span>
+                    <span class="contact__value">ООО «Технологии исследований»</span>
+                </div>
+            </div>
+        </div>
+
+        <form class="contact__form" id="contactForm" novalidate>
+            <div class="form-row">
+                <label class="form-label" for="fName">Ваше имя</label>
+                <input type="text" id="fName" name="name" class="form-input" required maxlength="120" autocomplete="name">
+            </div>
+            <div class="form-row">
+                <label class="form-label" for="fEmail">E-mail для ответа</label>
+                <input type="email" id="fEmail" name="email" class="form-input" required maxlength="120" autocomplete="email">
+            </div>
+            <div class="form-row">
+                <label class="form-label" for="fTopic">Тема обращения</label>
+                <select id="fTopic" name="topic" class="form-input">
+                    <option value="Инвестиции">Инвестиции</option>
+                    <option value="Партнёрство / интеграция">Партнёрство / интеграция</option>
+                    <option value="Пилотное внедрение">Пилотное внедрение</option>
+                    <option value="Общий вопрос" selected>Общий вопрос</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label class="form-label" for="fMessage">Сообщение</label>
+                <textarea id="fMessage" name="message" class="form-input form-input--textarea" rows="5" required maxlength="2000"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary form-submit">Отправить</button>
+            <p class="form-hint">
+                По нажатию откроется ваш почтовый клиент с уже заполненным письмом.
+                Если хотите написать напрямую — <a href="mailto:a.i.kononov@yandex.ru">a.i.kononov@yandex.ru</a>.
+            </p>
+        </form>
+    </div>
+</section>
+
+<!-- ========== Footer ========== -->
+<footer class="footer">
+    <div class="container footer__inner">
+        <div class="footer__copy">© 2026 ООО «Технологии исследований». Все права защищены.</div>
+        <a href="https://fasie.ru" target="_blank" rel="noopener" class="footer__support">
+            <img src="assets/img/fasie-white.png" alt="" class="footer__support-logo">
+            <span class="footer__support-texts">
+                <span class="footer__support-label">Разработано при поддержке</span>
+                <span class="footer__support-name">Фонда содействия инновациям</span>
+            </span>
+        </a>
+    </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Наверх">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+</button>
+
+<script src="assets/main.js" defer></script>
+</body>
+</html>

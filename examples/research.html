@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>База знаний R&amp;D — пример использования ИНВЕНТУМ</title>
+    <meta name="description" content="Применение прототипа ИНВЕНТУМ к задачам R&D: единая база исследований, экспериментов, методик и публикаций со связями и графовой навигацией.">
+    <meta property="og:title" content="База знаний R&D — пример ИНВЕНТУМ">
+    <meta property="og:description" content="Прототип ИНВЕНТУМ в задачах поддержки научных исследований и R&D.">
+    <meta property="og:image" content="../assets/img/seo_img.jpg">
+    <meta property="og:type" content="article">
+    <link rel="icon" type="image/png" href="../assets/img/logo-dark.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="case-page">
+
+<nav class="nav is-scrolled" id="nav">
+    <div class="container nav__inner">
+        <a href="../index.html" class="nav__brand">
+            <img src="../assets/img/logo-dark.png" alt="" class="nav__logo nav__logo--dark" style="opacity:1; position:static;">
+            <span class="nav__title">ИНВЕНТУМ</span>
+        </a>
+        <ul class="nav__menu">
+            <li><a href="../index.html#cases">← Все примеры</a></li>
+            <li><a href="../index.html#contact" class="nav__cta">Связаться</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header class="case-hero">
+    <div class="container">
+        <span class="case-hero__eyebrow">Пример использования</span>
+        <h1 class="case-hero__title">База знаний R&amp;D: исследования, эксперименты, методики</h1>
+        <p class="case-hero__lede">
+            Прямое применение прототипа в задачах, под которые велась НИОКР с поддержкой
+            Фонда содействия инновациям. Лаборатория, R&amp;D-департамент, проектный
+            институт или частный исследовательский фонд получают единую структурированную
+            базу научной активности с прослеживаемыми связями.
+        </p>
+    </div>
+</header>
+
+<section class="section case-section">
+    <div class="container case-narrow">
+        <span class="section__eyebrow">Зачем</span>
+        <h2 class="case-h2">Что решает прототип</h2>
+        <p class="case-p">
+            В типовой исследовательской команде знание распределено по электронным письмам,
+            файловым серверам, личным таблицам и устным договорённостям. Когда сотрудник
+            уходит — вместе с ним уходит и понимание, какая методика к какому эксперименту
+            применялась, где лежат результаты и кто отвечает за оборудование. Поиск превращается
+            в раскопки, отчётность — в недельный квест.
+        </p>
+        <p class="case-p">
+            ИНВЕНТУМ строит на этих данных структурированный реестр с типизированными
+            объектами и явными связями. Эксперимент, методика, образец, прибор, публикация —
+            каждое со своей карточкой и историей. Найти, кто и когда применял конкретную
+            методику; пройти по цепочке от прибора через эксперименты к статьям; восстановить
+            контекст при смене состава — задача нескольких кликов вместо нескольких дней.
+        </p>
+    </div>
+</section>
+
+<section class="section case-section case-section--alt">
+    <div class="container case-narrow">
+        <span class="section__eyebrow">Модель</span>
+        <h2 class="case-h2">Структура данных</h2>
+        <p class="case-p">
+            Метамодель описывает реальный жизненный цикл R&amp;D. Каждый класс соответствует
+            понятной для исследователя сущности; связи между ними отражают реальные рабочие
+            процессы.
+        </p>
+        <ul class="case-model">
+            <li><strong>Сотрудник</strong> — исследователь, его роль, подразделение, контактные данные.</li>
+            <li><strong>Подразделение</strong> — лаборатория, отдел, кафедра. Иерархия и руководители.</li>
+            <li><strong>Проект</strong> — научно-исследовательская тема со сроками, целями, источником финансирования.</li>
+            <li><strong>Эксперимент</strong> — конкретное экспериментальное событие с датой, условиями, результатами.</li>
+            <li><strong>Методика</strong> — методический документ с автором и версией.</li>
+            <li><strong>Образец</strong> — материал, биообразец, изделие — что изучается.</li>
+            <li><strong>Оборудование</strong> — приборы, установки, расходные материалы.</li>
+            <li><strong>Публикация</strong> — статья, доклад, патент, отчёт.</li>
+            <li><strong>Грант / Договор</strong> — источник финансирования с условиями отчётности.</li>
+        </ul>
+        <p class="case-p">
+            <strong>Ключевые связи:</strong> Сотрудник работает в подразделении и ведёт эксперимент.
+            Эксперимент относится к проекту, использует методику, оборудование и образцы.
+            Методика принадлежит автору. Результаты эксперимента опубликованы в статье.
+            Проект финансируется грантом или договором. Все связи двунаправленные — от любой
+            точки можно обратно дойти до источника.
+        </p>
+    </div>
+</section>
+
+<section class="section case-section">
+    <div class="container">
+        <div class="section__head">
+            <span class="section__eyebrow">Демонстрация</span>
+            <h2 class="section__title">Прототип в действии</h2>
+            <p class="section__lede">
+                Шесть ключевых видов из прототипа на этой модели данных.
+                Скриншоты будут добавлены — здесь стоят заготовки.
+            </p>
+        </div>
+
+        <div class="case-shots">
+            <figure class="case-shot">
+                <div class="case-shot__placeholder">
+                    <span class="case-shot__type">01 / Конструктор модели</span>
+                    <span class="case-shot__hint">Скриншот будет добавлен</span>
+                </div>
+                <figcaption>
+                    Описание классов «Эксперимент», «Методика», «Образец»: набор характеристик,
+                    типы данных, встречные связи, шаблоны автоформулы наименования объектов.
+                </figcaption>
+            </figure>
+
+            <figure class="case-shot">
+                <div class="case-shot__placeholder">
+                    <span class="case-shot__type">02 / Реестр объектов</span>
+                    <span class="case-shot__hint">Скриншот будет добавлен</span>
+                </div>
+                <figcaption>
+                    Реестр экспериментов с фильтрами по проекту, дате, статусу.
+                    Группировка, сортировка, экспорт результатов.
+                </figcaption>
+            </figure>
+
+            <figure class="case-shot">
+                <div class="case-shot__placeholder">
+                    <span class="case-shot__type">03 / Карточка объекта</span>
+                    <span class="case-shot__hint">Скриншот будет добавлен</span>
+                </div>
+                <figcaption>
+                    Карточка эксперимента: основные характеристики, использованные методика
+                    и оборудование, привязанные образцы, результирующие публикации.
+                </figcaption>
+            </figure>
+
+            <figure class="case-shot">
+                <div class="case-shot__placeholder">
+                    <span class="case-shot__type">04 / Поиск</span>
+                    <span class="case-shot__hint">Скриншот будет добавлен</span>
+                </div>
+                <figcaption>
+                    Полнотекстовый поиск по объектам с фасетными фильтрами:
+                    тип объекта, период, ответственный, статус.
+                </figcaption>
+            </figure>
+
+            <figure class="case-shot">
+                <div class="case-shot__placeholder">
+                    <span class="case-shot__type">05 / Семантическая сеть</span>
+                    <span class="case-shot__hint">Скриншот будет добавлен</span>
+                </div>
+                <figcaption>
+                    Интерактивный граф вокруг проекта: связанные эксперименты,
+                    методики, оборудование, публикации. Можно перемещаться по узлам,
+                    раскрывать связи, сохранять схемы.
+                </figcaption>
+            </figure>
+
+            <figure class="case-shot">
+                <div class="case-shot__placeholder">
+                    <span class="case-shot__type">06 / Анализ связей</span>
+                    <span class="case-shot__hint">Скриншот будет добавлен</span>
+                </div>
+                <figcaption>
+                    Поиск кратчайшего пути между объектами: например, от прибора
+                    через эксперименты к публикациям — какие результаты он обеспечил.
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<section class="section case-section case-section--alt">
+    <div class="container case-narrow">
+        <span class="section__eyebrow">Результат</span>
+        <h2 class="case-h2">Что это даёт</h2>
+        <ul class="case-outcome">
+            <li>Единая база преемственного знания: при ротации сотрудников контекст не теряется.</li>
+            <li>Ускорение поиска методик и экспериментов в разы по сравнению с файлами и почтой.</li>
+            <li>Прозрачная отчётность перед грантодателями и руководством без ручного сбора материалов.</li>
+            <li>Основа для подключения AI-ассистентов: типизированный, структурированный контекст работает с LLM в разы лучше неструктурированных файлов.</li>
+            <li>Передача части регулярных задач (учёт оборудования, журналы экспериментов) от привычных таблиц — в систему с правами и аудитом.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="section case-cta-section">
+    <div class="container">
+        <div class="case-cta">
+            <h2>Заинтересовал сценарий?</h2>
+            <p>Расскажем подробнее, покажем демо на реальной модели, обсудим возможности пилотного проекта.</p>
+            <a href="../index.html#contact" class="btn btn--primary">Связаться</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer__inner">
+        <div class="footer__copy">© 2026 ООО «Технологии исследований». Все права защищены.</div>
+        <a href="https://fasie.ru" target="_blank" rel="noopener" class="footer__support">
+            <img src="../assets/img/fasie-white.png" alt="" class="footer__support-logo">
+            <span class="footer__support-texts">
+                <span class="footer__support-label">Разработано при поддержке</span>
+                <span class="footer__support-name">Фонда содействия инновациям</span>
+            </span>
+        </a>
+    </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Наверх">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+</button>
+
+<script src="../assets/main.js" defer></script>
+</body>
+</html>

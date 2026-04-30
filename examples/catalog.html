@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отраслевой каталог — пример использования ИНВЕНТУМ</title>
+    <meta name="description" content="Применение прототипа ИНВЕНТУМ к задаче отраслевого каталога: оборудование, поставщики, объекты, договоры. Структурированный контент с богатыми связями и фасетным поиском.">
+    <meta property="og:title" content="Отраслевой каталог — пример ИНВЕНТУМ">
+    <meta property="og:description" content="Прототип ИНВЕНТУМ как платформа для отраслевого каталога с фасетным поиском.">
+    <meta property="og:image" content="../assets/img/seo_img.jpg">
+    <meta property="og:type" content="article">
+    <link rel="icon" type="image/png" href="../assets/img/logo-dark.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="case-page">
+
+<nav class="nav is-scrolled" id="nav">
+    <div class="container nav__inner">
+        <a href="../index.html" class="nav__brand">
+            <img src="../assets/img/logo-dark.png" alt="" class="nav__logo nav__logo--dark" style="opacity:1; position:static;">
+            <span class="nav__title">ИНВЕНТУМ</span>
+        </a>
+        <ul class="nav__menu">
+            <li><a href="../index.html#cases">← Все примеры</a></li>
+            <li><a href="../index.html#contact" class="nav__cta">Связаться</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header class="case-hero">
+    <div class="container">
+        <span class="case-hero__eyebrow">Пример использования</span>
+        <h1 class="case-hero__title">Отраслевой каталог: оборудование, поставщики, объекты</h1>
+        <p class="case-hero__lede">
+            Прототип в задаче отраслевого каталога — для производственной компании,
+            отраслевого ассоциации, промышленного интегратора. Каталог оборудования
+            с поставщиками, сертификатами, ценами и объектами установки. Богатые связи
+            и фасетный поиск, который не делается обычной CMS.
+        </p>
+    </div>
+</header>
+
+<section class="section case-section">
+    <div class="container case-narrow">
+        <span class="section__eyebrow">Зачем</span>
+        <h2 class="case-h2">Что решает прототип</h2>
+        <p class="case-p">
+            Отраслевые каталоги — оборудования, объектов, специалистов, лицензий —
+            обычно ведутся либо в Excel, либо на самописных порталах с самодельной CMS.
+            Excel разваливается при росте, а CMS обычно ориентированы на статьи и баннеры,
+            а не на типизированные объекты с десятками характеристик и связями. В итоге компания
+            либо тратит ресурсы на собственную разработку, либо теряет в качестве данных.
+        </p>
+        <p class="case-p">
+            ИНВЕНТУМ закрывает именно этот зазор: типизированные классы, гибкая модель характеристик,
+            явные связи, мощный поиск. Каталог получает фасетные фильтры, сравнение объектов
+            по характеристикам, навигацию от поставщика к его продукции, от продукции к
+            объектам установки. Это не CMS и не самописное решение — это структурированная
+            предметная база с готовым UI.
+        </p>
+    </div>
+</section>
+
+<section class="section case-section case-section--alt">
+    <div class="container case-narrow">
+        <span class="section__eyebrow">Модель</span>
+        <h2 class="case-h2">Структура данных</h2>
+        <p class="case-p">
+            Метамодель отражает структуру каталога. Пример приведён для каталога
+            промышленного оборудования — но та же логика работает для любого отраслевого
+            каталога: недвижимости, специалистов, услуг, нормативно-технической документации.
+        </p>
+        <ul class="case-model">
+            <li><strong>Категория</strong> — иерархическая классификация оборудования или продукции.</li>
+            <li><strong>Оборудование</strong> — конкретная позиция: модель, характеристики, изображение, документация.</li>
+            <li><strong>Производитель</strong> — компания-производитель с реквизитами и контактами.</li>
+            <li><strong>Поставщик</strong> — организация, поставляющая оборудование на местный рынок.</li>
+            <li><strong>Сертификат</strong> — документ, подтверждающий соответствие.</li>
+            <li><strong>Объект</strong> — место установки или эксплуатации (предприятие, площадка).</li>
+            <li><strong>Договор / Поставка</strong> — событие поставки конкретного оборудования.</li>
+            <li><strong>Сервисная организация</strong> — компания, обслуживающая оборудование.</li>
+        </ul>
+        <p class="case-p">
+            <strong>Ключевые связи:</strong> Оборудование относится к категории и производится
+            производителем. Поставляется поставщиками и сервисируется сервисными организациями.
+            Имеет сертификаты соответствия. Установлено на объектах через договоры поставки.
+            Каждая связь — двунаправленная: от любого производителя видим, какое его оборудование
+            где установлено, кем поставлено и какие у него сертификаты.
+        </p>
+    </div>
+</section>
+
+<section class="section case-section">
+    <div class="container">
+        <div class="section__head">
+            <span class="section__eyebrow">Демонстрация</span>
+            <h2 class="section__title">Прототип в действии</h2>
+            <p class="section__lede">
+                Шесть ключевых видов из прототипа на этой модели данных.
+                Скриншоты будут добавлены — здесь стоят заготовки.
+            </p>
+        </div>
+
+        <div class="case-shots">
+            <figure class="case-shot">
+                <div class="case-shot__placeholder">
+                    <span class="case-shot__type">01 / Конструктор модели</span>
+                    <span class="case-shot__hint">Скриншот будет добавлен</span>
+                </div>
+                <figcaption>
+                    Описание классов «Оборудование», «Производитель», «Объект»: набор
+                    характеристик, типы данных (включая файлы и изображения), встречные связи.
+                </figcaption>
+            </figure>
+
+            <figure class="case-shot">
+                <div class="case-shot__placeholder">
+                    <span class="case-shot__type">02 / Реестр и фасетные фильтры</span>
+                    <span class="case-shot__hint">Скриншот будет добавлен</span>
+                </div>
+                <figcaption>
+                    Каталог оборудования с фасетными фильтрами по категории, производителю,
+                    наличию сертификата, диапазону характеристик. Сортировка, группировка.
+                </figcaption>
+            </figure>
+
+            <figure class="case-shot">
+                <div class="case-shot__placeholder">
+                    <span class="case-shot__type">03 / Карточка объекта</span>
+                    <span class="case-shot__hint">Скриншот будет добавлен</span>
+                </div>
+                <figcaption>
+                    Карточка позиции оборудования: характеристики, изображения,
+                    производитель, поставщики, сертификаты, объекты установки и история
+                    поставок.
+                </figcaption>
+            </figure>
+
+            <figure class="case-shot">
+                <div class="case-shot__placeholder">
+                    <span class="case-shot__type">04 / Поиск</span>
+                    <span class="case-shot__hint">Скриншот будет добавлен</span>
+                </div>
+                <figcaption>
+                    Полнотекстовый поиск по каталогу с подсказками и автокомплитом.
+                    Поиск с учётом синонимов и характеристик.
+                </figcaption>
+            </figure>
+
+            <figure class="case-shot">
+                <div class="case-shot__placeholder">
+                    <span class="case-shot__type">05 / Семантическая сеть</span>
+                    <span class="case-shot__hint">Скриншот будет добавлен</span>
+                </div>
+                <figcaption>
+                    Граф вокруг производителя: вся его продукция, поставщики, объекты
+                    установки. Альтернатива линейному списку — карта рынка.
+                </figcaption>
+            </figure>
+
+            <figure class="case-shot">
+                <div class="case-shot__placeholder">
+                    <span class="case-shot__type">06 / Анализ связей</span>
+                    <span class="case-shot__hint">Скриншот будет добавлен</span>
+                </div>
+                <figcaption>
+                    Цепочка от объекта к производителю: какое оборудование установлено,
+                    кто его поставил, какие у него сертификаты, кто обслуживает —
+                    одним кликом по графу.
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<section class="section case-section case-section--alt">
+    <div class="container case-narrow">
+        <span class="section__eyebrow">Результат</span>
+        <h2 class="case-h2">Что это даёт</h2>
+        <ul class="case-outcome">
+            <li>Профессиональный отраслевой каталог без многомесячной самописной разработки.</li>
+            <li>Структурированный контент с типизированными характеристиками вместо «полей описания» в обычных CMS.</li>
+            <li>Богатые связи между объектами — основа для умного поиска и рекомендаций.</li>
+            <li>Гибкая модель: новая категория или дополнительная характеристика — без переразвёртывания базы.</li>
+            <li>Возможность развития до публичного каталога-сайта, торговой площадки или внутрикорпоративной MDM-системы.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="section case-cta-section">
+    <div class="container">
+        <div class="case-cta">
+            <h2>Заинтересовал сценарий?</h2>
+            <p>Расскажем подробнее, покажем демо на реальной модели, обсудим возможности пилотного проекта.</p>
+            <a href="../index.html#contact" class="btn btn--primary">Связаться</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer__inner">
+        <div class="footer__copy">© 2026 ООО «Технологии исследований». Все права защищены.</div>
+        <a href="https://fasie.ru" target="_blank" rel="noopener" class="footer__support">
+            <img src="../assets/img/fasie-white.png" alt="" class="footer__support-logo">
+            <span class="footer__support-texts">
+                <span class="footer__support-label">Разработано при поддержке</span>
+                <span class="footer__support-name">Фонда содействия инновациям</span>
+            </span>
+        </a>
+    </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Наверх">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+</button>
+
+<script src="../assets/main.js" defer></script>
+</body>
+</html>

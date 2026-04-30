@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корпоративная база знаний и MDM — пример использования ИНВЕНТУМ</title>
+    <meta name="description" content="Применение прототипа ИНВЕНТУМ к корпоративным задачам: структурированные регламенты, методики, мастер-данные предприятия, ответственные подразделения, история изменений.">
+    <meta property="og:title" content="Корпоративная база знаний и MDM — пример ИНВЕНТУМ">
+    <meta property="og:description" content="Прототип ИНВЕНТУМ как корпоративная база знаний и MDM-система.">
+    <meta property="og:image" content="../assets/img/seo_img.jpg">
+    <meta property="og:type" content="article">
+    <link rel="icon" type="image/png" href="../assets/img/logo-dark.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="case-page">
+
+<nav class="nav is-scrolled" id="nav">
+    <div class="container nav__inner">
+        <a href="../index.html" class="nav__brand">
+            <img src="../assets/img/logo-dark.png" alt="" class="nav__logo nav__logo--dark" style="opacity:1; position:static;">
+            <span class="nav__title">ИНВЕНТУМ</span>
+        </a>
+        <ul class="nav__menu">
+            <li><a href="../index.html#cases">← Все примеры</a></li>
+            <li><a href="../index.html#contact" class="nav__cta">Связаться</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header class="case-hero">
+    <div class="container">
+        <span class="case-hero__eyebrow">Пример использования</span>
+        <h1 class="case-hero__title">Корпоративная база знаний и MDM</h1>
+        <p class="case-hero__lede">
+            Прототип в корпоративной среде: структурированные регламенты, методики,
+            мастер-данные предприятия, ответственные подразделения и связи между ними.
+            Альтернатива самописным порталам, тяжеловесному SharePoint и разрозненным
+            файловым хранилищам.
+        </p>
+    </div>
+</header>
+
+<section class="section case-section">
+    <div class="container case-narrow">
+        <span class="section__eyebrow">Зачем</span>
+        <h2 class="case-h2">Что решает прототип</h2>
+        <p class="case-p">
+            В крупных и средних компаниях документация и нормативно-методическая база живут
+            в куче несвязных мест: SharePoint, Confluence, файловые шары, общие папки в почте,
+            Excel-реестры. Регламенты часто не привязаны к подразделениям, методики — к
+            ответственным, мастер-данные — к источникам происхождения. Найти текущую версию
+            документа, понять, кто за него отвечает и какие процессы он покрывает —
+            операция уровня «спросить у Антона из второго отдела».
+        </p>
+        <p class="case-p">
+            ИНВЕНТУМ строит на этих данных типизированный граф: каждый документ, регламент,
+            методика, единица мастер-данных получают свой класс, характеристики и явные связи
+            с ответственными лицами, подразделениями и зависимыми артефактами. История
+            изменений ведётся на уровне каждой характеристики каждого объекта; права —
+            гранулярные. Это и есть основа корпоративной базы знаний, объединённой с MDM.
+        </p>
+    </div>
+</section>
+
+<section class="section case-section case-section--alt">
+    <div class="container case-narrow">
+        <span class="section__eyebrow">Модель</span>
+        <h2 class="case-h2">Структура данных</h2>
+        <p class="case-p">
+            Метамодель отражает реальную организационную и нормативно-методическую структуру
+            предприятия. Все классы и связи описываются администратором без программирования.
+        </p>
+        <ul class="case-model">
+            <li><strong>Подразделение</strong> — иерархия отделов с руководителями и зоной ответственности.</li>
+            <li><strong>Сотрудник</strong> — должность, контактные данные, роли в системе.</li>
+            <li><strong>Регламент</strong> — нормативный документ с областью действия, статусом, версией, грифом.</li>
+            <li><strong>Методика / Процедура</strong> — операционный документ, регулируемый регламентом.</li>
+            <li><strong>Мастер-данные</strong> — справочные классы по типу: контрагенты, продукты, точки сбыта, активы.</li>
+            <li><strong>Документ / Версия</strong> — приложение к регламенту, обновление, утверждение.</li>
+            <li><strong>Процесс</strong> — бизнес-процесс, в котором участвуют документы и подразделения.</li>
+            <li><strong>Ответственность</strong> — связь сотрудника с регламентом, методикой или объектом мастер-данных.</li>
+        </ul>
+        <p class="case-p">
+            <strong>Ключевые связи:</strong> Сотрудник работает в подразделении и отвечает за
+            регламенты или мастер-данные. Регламент действует в зоне подразделений и регулирует
+            методики. Методики применяются в процессах. Мастер-данные используются в процессах
+            и регламентах. Все версии документов сохраняются с возможностью отката и аудитом.
+        </p>
+    </div>
+</section>
+
+<section class="section case-section">
+    <div class="container">
+        <div class="section__head">
+            <span class="section__eyebrow">Демонстрация</span>
+            <h2 class="section__title">Прототип в действии</h2>
+            <p class="section__lede">
+                Шесть ключевых видов из прототипа на этой модели данных.
+                Скриншоты будут добавлены — здесь стоят заготовки.
+            </p>
+        </div>
+
+        <div class="case-shots">
+            <figure class="case-shot">
+                <div class="case-shot__placeholder">
+                    <span class="case-shot__type">01 / Конструктор модели</span>
+                    <span class="case-shot__hint">Скриншот будет добавлен</span>
+                </div>
+                <figcaption>
+                    Описание классов «Регламент», «Методика», «Мастер-данные»: характеристики,
+                    встречные связи с подразделениями, ответственными и процессами.
+                </figcaption>
+            </figure>
+
+            <figure class="case-shot">
+                <div class="case-shot__placeholder">
+                    <span class="case-shot__type">02 / Реестр объектов</span>
+                    <span class="case-shot__hint">Скриншот будет добавлен</span>
+                </div>
+                <figcaption>
+                    Реестр регламентов с фильтрами по статусу, грифу, ответственному
+                    подразделению. Группировка по областям действия.
+                </figcaption>
+            </figure>
+
+            <figure class="case-shot">
+                <div class="case-shot__placeholder">
+                    <span class="case-shot__type">03 / Карточка объекта</span>
+                    <span class="case-shot__hint">Скриншот будет добавлен</span>
+                </div>
+                <figcaption>
+                    Карточка регламента: версии, утверждающее лицо, область действия,
+                    зависимые методики, процессы и мастер-данные.
+                </figcaption>
+            </figure>
+
+            <figure class="case-shot">
+                <div class="case-shot__placeholder">
+                    <span class="case-shot__type">04 / Поиск и права</span>
+                    <span class="case-shot__hint">Скриншот будет добавлен</span>
+                </div>
+                <figcaption>
+                    Полнотекстовый поиск по корпоративной базе с учётом прав доступа:
+                    каждый сотрудник видит только то, что разрешено его ролью.
+                </figcaption>
+            </figure>
+
+            <figure class="case-shot">
+                <div class="case-shot__placeholder">
+                    <span class="case-shot__type">05 / Семантическая сеть</span>
+                    <span class="case-shot__hint">Скриншот будет добавлен</span>
+                </div>
+                <figcaption>
+                    Граф вокруг подразделения: его регламенты, методики, ответственные
+                    сотрудники, связанные процессы. Карта зон ответственности.
+                </figcaption>
+            </figure>
+
+            <figure class="case-shot">
+                <div class="case-shot__placeholder">
+                    <span class="case-shot__type">06 / История изменений</span>
+                    <span class="case-shot__hint">Скриншот будет добавлен</span>
+                </div>
+                <figcaption>
+                    История изменений на уровне каждой характеристики: кто, когда и какое
+                    значение исправил. Полный аудит — обязательное требование внутреннего
+                    контроля и внешних проверок.
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<section class="section case-section case-section--alt">
+    <div class="container case-narrow">
+        <span class="section__eyebrow">Результат</span>
+        <h2 class="case-h2">Что это даёт</h2>
+        <ul class="case-outcome">
+            <li>Единый источник правды по корпоративным регламентам, методикам и мастер-данным.</li>
+            <li>Прозрачные зоны ответственности: для любого регламента видно подразделение и сотрудника-владельца.</li>
+            <li>Полный аудит изменений «из коробки» — соответствие требованиям внутреннего контроля и внешних проверок.</li>
+            <li>Гранулярный доступ: пользователь видит только разрешённое его ролью.</li>
+            <li>Альтернатива тяжеловесным enterprise-решениям с сопоставимым функционалом и понятным владельцем.</li>
+            <li>Готовность к интеграции с корпоративной IDP, AD и существующими источниками мастер-данных.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="section case-cta-section">
+    <div class="container">
+        <div class="case-cta">
+            <h2>Заинтересовал сценарий?</h2>
+            <p>Расскажем подробнее, покажем демо на реальной модели, обсудим возможности пилотного проекта.</p>
+            <a href="../index.html#contact" class="btn btn--primary">Связаться</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer__inner">
+        <div class="footer__copy">© 2026 ООО «Технологии исследований». Все права защищены.</div>
+        <a href="https://fasie.ru" target="_blank" rel="noopener" class="footer__support">
+            <img src="../assets/img/fasie-white.png" alt="" class="footer__support-logo">
+            <span class="footer__support-texts">
+                <span class="footer__support-label">Разработано при поддержке</span>
+                <span class="footer__support-name">Фонда содействия инновациям</span>
+            </span>
+        </a>
+    </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Наверх">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+</button>
+
+<script src="../assets/main.js" defer></script>
+</body>
+</html>
