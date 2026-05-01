@@ -170,4 +170,47 @@
 
         reveal.forEach((el) => revealObserver.observe(el));
     }
+
+    /* ---------- Лайтбокс для скриншотов прототипа ---------- */
+    const shotFrames = document.querySelectorAll('.case-shot__frame');
+    if (shotFrames.length) {
+        const overlay = document.createElement('div');
+        overlay.className = 'shot-lightbox';
+        overlay.setAttribute('role', 'dialog');
+        overlay.setAttribute('aria-modal', 'true');
+        overlay.innerHTML =
+            '<button class="shot-lightbox__close" type="button" aria-label="Закрыть">×</button>' +
+            '<img class="shot-lightbox__img" alt="">';
+        document.body.appendChild(overlay);
+
+        const overlayImg = overlay.querySelector('.shot-lightbox__img');
+        const closeBtn = overlay.querySelector('.shot-lightbox__close');
+
+        const openLightbox = (src, alt) => {
+            overlayImg.src = src;
+            overlayImg.alt = alt || '';
+            overlay.classList.add('is-open');
+            document.body.style.overflow = 'hidden';
+        };
+        const closeLightbox = () => {
+            overlay.classList.remove('is-open');
+            document.body.style.overflow = '';
+            overlayImg.src = '';
+        };
+
+        shotFrames.forEach((frame) => {
+            frame.addEventListener('click', () => {
+                const img = frame.querySelector('img');
+                if (img) openLightbox(img.src, img.alt);
+            });
+        });
+
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) closeLightbox();
+        });
+        closeBtn.addEventListener('click', closeLightbox);
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && overlay.classList.contains('is-open')) closeLightbox();
+        });
+    }
 })();

@@ -98,38 +98,61 @@
             <span class="section__eyebrow">Демонстрация</span>
             <h2 class="section__title">Прототип в действии</h2>
             <p class="section__lede">
-                Шесть ключевых видов из прототипа на этой модели данных.
-                Скриншоты будут добавлены — здесь стоят заготовки.
+                Девять ключевых экранов прототипа на этой модели данных — от конструктора
+                метамодели до семантической сети. Кликните по скриншоту, чтобы рассмотреть
+                его подробнее.
             </p>
         </div>
 
         <div class="case-shots">
             <figure class="case-shot">
-                <div class="case-shot__placeholder">
-                    <span class="case-shot__type">01 / Конструктор модели</span>
-                    <span class="case-shot__hint">Скриншот будет добавлен</span>
+                <span class="case-shot__type">01 / Конструктор модели</span>
+                <div class="case-shot__frame">
+                    <img src="../assets/img/screens/mdm/constructor.png" alt="Конструктор модели MDM">
                 </div>
                 <figcaption>
-                    Описание классов «Регламент», «Методика», «Мастер-данные»: характеристики,
-                    встречные связи с подразделениями, ответственными и процессами.
+                    Описание метамодели: классы «Регламент», «Методика», «Мастер-данные»,
+                    «Подразделение», «Процесс» с встречными связями к ответственным.
                 </figcaption>
             </figure>
 
             <figure class="case-shot">
-                <div class="case-shot__placeholder">
-                    <span class="case-shot__type">02 / Реестр объектов</span>
-                    <span class="case-shot__hint">Скриншот будет добавлен</span>
+                <span class="case-shot__type">02 / Класс</span>
+                <div class="case-shot__frame">
+                    <img src="../assets/img/screens/mdm/class.png" alt="Экран настройки класса «Регламент»">
+                </div>
+                <figcaption>
+                    Детальный экран класса «Регламент»: характеристики (статус, гриф, версия),
+                    связи с зависимыми методиками, процессами и подразделениями.
+                </figcaption>
+            </figure>
+
+            <figure class="case-shot">
+                <span class="case-shot__type">03 / Характеристика</span>
+                <div class="case-shot__frame">
+                    <img src="../assets/img/screens/mdm/characteristic.png" alt="Настройка характеристики класса">
+                </div>
+                <figcaption>
+                    Настройка отдельной характеристики: тип данных, обязательность,
+                    видимость в реестре, гранулярные права на чтение и редактирование.
+                </figcaption>
+            </figure>
+
+            <figure class="case-shot">
+                <span class="case-shot__type">04 / Реестр объектов</span>
+                <div class="case-shot__frame">
+                    <img src="../assets/img/screens/mdm/registry.png" alt="Реестр регламентов">
                 </div>
                 <figcaption>
                     Реестр регламентов с фильтрами по статусу, грифу, ответственному
-                    подразделению. Группировка по областям действия.
+                    подразделению. Группировка по областям действия, настраиваемые виды.
                 </figcaption>
             </figure>
 
             <figure class="case-shot">
-                <div class="case-shot__placeholder">
-                    <span class="case-shot__type">03 / Карточка объекта</span>
-                    <span class="case-shot__hint">Скриншот будет добавлен</span>
+                <span class="case-shot__type">05 / Карточка объекта</span>
+                <div class="case-shot__frame">
+                    <img src="../assets/img/screens/mdm/card.png" alt="Карточка регламента">
                 </div>
                 <figcaption>
                     Карточка регламента: версии, утверждающее лицо, область действия,
@@ -138,9 +161,20 @@
             </figure>
 
             <figure class="case-shot">
-                <div class="case-shot__placeholder">
-                    <span class="case-shot__type">04 / Поиск и права</span>
-                    <span class="case-shot__hint">Скриншот будет добавлен</span>
+                <span class="case-shot__type">06 / Связи объекта</span>
+                <div class="case-shot__frame">
+                    <img src="../assets/img/screens/mdm/links.png" alt="Связи регламента с другими объектами">
+                </div>
+                <figcaption>
+                    Все связи регламента: подразделения, методики, процессы, мастер-данные.
+                    Прозрачная карта зон ответственности и зависимостей.
+                </figcaption>
+            </figure>
+
+            <figure class="case-shot">
+                <span class="case-shot__type">07 / Поиск</span>
+                <div class="case-shot__frame">
+                    <img src="../assets/img/screens/mdm/search.png" alt="Полнотекстовый поиск по корпоративной базе">
                 </div>
                 <figcaption>
                     Полнотекстовый поиск по корпоративной базе с учётом прав доступа:
@@ -149,25 +183,24 @@
             </figure>
 
             <figure class="case-shot">
-                <div class="case-shot__placeholder">
-                    <span class="case-shot__type">05 / Семантическая сеть</span>
-                    <span class="case-shot__hint">Скриншот будет добавлен</span>
+                <span class="case-shot__type">08 / Поиск взаимосвязей</span>
+                <div class="case-shot__frame">
+                    <img src="../assets/img/screens/mdm/path.png" alt="Поиск пути между объектами">
                 </div>
                 <figcaption>
-                    Граф вокруг подразделения: его регламенты, методики, ответственные
-                    сотрудники, связанные процессы. Карта зон ответственности.
+                    Поиск пути между объектами: от документа к подразделению, отвечающему
+                    за конкретный процесс или мастер-данные — одним запросом по графу.
                 </figcaption>
             </figure>
 
             <figure class="case-shot">
-                <div class="case-shot__placeholder">
-                    <span class="case-shot__type">06 / История изменений</span>
-                    <span class="case-shot__hint">Скриншот будет добавлен</span>
+                <span class="case-shot__type">09 / Семантическая сеть</span>
+                <div class="case-shot__frame">
+                    <img src="../assets/img/screens/mdm/graph.png" alt="Семантическая сеть корпоративной базы">
                 </div>
                 <figcaption>
-                    История изменений на уровне каждой характеристики: кто, когда и какое
-                    значение исправил. Полный аудит — обязательное требование внутреннего
-                    контроля и внешних проверок.
+                    Граф вокруг подразделения: его регламенты, методики, ответственные
+                    сотрудники, связанные процессы. Карта зон ответственности.
                 </figcaption>
             </figure>
         </div>
