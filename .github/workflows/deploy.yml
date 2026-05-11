@@ -37,7 +37,8 @@ jobs:
 
       - name: Deploy files
         run: |
-          rsync -avz --delete \
+          rsync -rlvz --delete \
+            --chmod=Du=rwx,Dgo=rx,Fu=rw,Fgo=r \
             --exclude ".git" \
             --exclude ".github" \
             -e "ssh" \
