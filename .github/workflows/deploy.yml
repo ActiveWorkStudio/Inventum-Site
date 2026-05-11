@@ -46,4 +46,4 @@ jobs:
 
       - name: Reload Nginx
         run: |
-          ssh vps-deploy "sudo systemctl reload nginx || systemctl reload nginx"
+          ssh vps-deploy "sudo -n /usr/bin/systemctl reload nginx"
