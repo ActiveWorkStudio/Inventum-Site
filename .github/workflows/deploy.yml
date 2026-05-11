@@ -16,19 +16,33 @@ jobs:
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/id_ed25519
+          printf '%s\n' "${{ secrets.VPS_SSH_KEY }}" | tr -d '\r' > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -p ${{ secrets.VPS_PORT }} ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
+          cat <<'EOF' > ~/.ssh/config
+          Host vps-deploy
+            HostName ${{ secrets.VPS_HOST }}
+            User ${{ secrets.VPS_USER }}
+            Port ${{ secrets.VPS_PORT }}
+            IdentityFile ~/.ssh/id_ed25519
+            IdentitiesOnly yes
+            BatchMode yes
+            StrictHostKeyChecking yes
+          EOF
+          chmod 600 ~/.ssh/config
+
+      - name: SSH smoke test
+        run: |
+          ssh -vvv vps-deploy "echo 'SSH login success'"
 
       - name: Deploy files
         run: |
           rsync -avz --delete \
             --exclude ".git" \
             --exclude ".github" \
-            -e "ssh -p ${{ secrets.VPS_PORT }}" \
-            ./ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/inventum/
+            -e "ssh" \
+            ./ vps-deploy:/var/www/inventum/
 
       - name: Reload Nginx
         run: |
-          ssh -p ${{ secrets.VPS_PORT }} ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} \
-            "sudo systemctl reload nginx || systemctl reload nginx"
+          ssh vps-deploy "sudo systemctl reload nginx || systemctl reload nginx"
